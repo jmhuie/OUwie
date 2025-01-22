@@ -1106,7 +1106,7 @@ organizeHOUwieDat <- function(data, tip.fog, collapse = TRUE){
   }
   if(tip.fog=="none"){
     data.cor <- data[, 1:(dim(data)[2]-1)]
-    data.cor <- corHMM:::corProcessData(data.cor)
+    data.cor <- corHMM:::corProcessData(data.cor, collapse = collapse)
     data.ou <- data.frame(sp = data[,1], 
                           reg = data.cor$corData[,2], 
                           x = data[, dim(data)[2]])
